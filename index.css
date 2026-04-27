@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-cairo: 'Cairo', sans-serif;
+    
+    --background: 230 30% 6%;
+    --foreground: 225 50% 95%;
+    --card: 230 28% 10%;
+    --card-foreground: 225 50% 95%;
+    --popover: 230 28% 10%;
+    --popover-foreground: 225 50% 95%;
+    --primary: 45 100% 50%;
+    --primary-foreground: 230 30% 6%;
+    --secondary: 230 22% 14%;
+    --secondary-foreground: 225 50% 95%;
+    --muted: 230 22% 14%;
+    --muted-foreground: 225 30% 65%;
+    --accent: 14 100% 57%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 230 20% 18%;
+    --input: 230 20% 18%;
+    --ring: 45 100% 50%;
+    --chart-1: 14 100% 57%;
+    --chart-2: 122 39% 49%;
+    --chart-3: 45 100% 50%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --radius: 0.75rem;
+    
+    --team-a: 14 100% 57%;
+    --team-a-dark: 14 100% 37%;
+    --team-b: 122 39% 49%;
+    --team-b-dark: 122 60% 15%;
+    --gold: 45 100% 50%;
+    
+    --sidebar-background: 230 28% 10%;
+    --sidebar-foreground: 225 50% 95%;
+    --sidebar-primary: 45 100% 50%;
+    --sidebar-primary-foreground: 230 30% 6%;
+    --sidebar-accent: 230 22% 14%;
+    --sidebar-accent-foreground: 225 50% 95%;
+    --sidebar-border: 230 20% 18%;
+    --sidebar-ring: 45 100% 50%;
+  }
+
+  .dark {
+    --background: 230 30% 6%;
+    --foreground: 225 50% 95%;
+    --card: 230 28% 10%;
+    --card-foreground: 225 50% 95%;
+    --popover: 230 28% 10%;
+    --popover-foreground: 225 50% 95%;
+    --primary: 45 100% 50%;
+    --primary-foreground: 230 30% 6%;
+    --secondary: 230 22% 14%;
+    --secondary-foreground: 225 50% 95%;
+    --muted: 230 22% 14%;
+    --muted-foreground: 225 30% 65%;
+    --accent: 14 100% 57%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 230 20% 18%;
+    --input: 230 20% 18%;
+    --ring: 45 100% 50%;
+    --team-a: 14 100% 57%;
+    --team-a-dark: 14 100% 37%;
+    --team-b: 122 39% 49%;
+    --team-b-dark: 122 60% 15%;
+    --gold: 45 100% 50%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Cairo', sans-serif;
+}
+
+body {
+  background-color: hsl(230, 30%, 6%);
+  color: hsl(225, 50%, 95%);
+  -webkit-tap-highlight-color: transparent;
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(0) rotate(0); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes pulse-glow {
+  from { 
+    box-shadow: 0 0 15px 3px hsl(45, 100%, 50%), 0 0 0 3px rgba(255, 215, 0, 0.4);
+    transform: scale(1);
+  }
+  to { 
+    box-shadow: 0 0 30px 12px #ffaa00, 0 0 0 6px hsl(45, 100%, 50%);
+    transform: scale(1.06);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-bz-a {
+  0%, 100% { box-shadow: 0 14px 50px rgba(255, 87, 34, 0.4), 0 0 0 10px rgba(255, 87, 34, 0.08), 0 0 0 22px rgba(255, 87, 34, 0.04); }
+  50% { box-shadow: 0 18px 70px rgba(255, 87, 34, 0.75), 0 0 0 28px rgba(255, 87, 34, 0.05), 0 0 0 46px rgba(255, 87, 34, 0.02); }
+}
+
+@keyframes pulse-bz-b {
+  0%, 100% { box-shadow: 0 14px 50px rgba(76, 175, 80, 0.4), 0 0 0 10px rgba(76, 175, 80, 0.08), 0 0 0 22px rgba(76, 175, 80, 0.04); }
+  50% { box-shadow: 0 18px 70px rgba(76, 175, 80, 0.75), 0 0 0 28px rgba(76, 175, 80, 0.05), 0 0 0 46px rgba(76, 175, 80, 0.02); }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,.12); border-radius: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
